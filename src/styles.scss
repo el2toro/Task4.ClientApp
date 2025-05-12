@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@font-face {
+  font-family: DMSans, 'DM Sans', sans-serif;
+  src: url('/assets/fonts/DMSans-Regular.tff') format('tff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Unbounded, 'Unbounded', sans-serif;
+  src: url('/assets/fonts/Unbounded-Regular.tff') format('tff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$orange-palette,
+      tertiary: mat.$magenta-palette,
+    ),
+  )
+);
+
+body {
+  font-family: DMSans, 'DM Sans', sans-serif;
+  margin: 0;
+  height: 100%;
+
+  @include mat.all-component-themes($theme);
+}
+
+html {
+  height: 100%;
+}
+
+@include mat.core();
+@include mat.color-variants-backwards-compatibility($theme);

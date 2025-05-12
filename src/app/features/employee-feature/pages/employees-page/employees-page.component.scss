@@ -1,0 +1,19 @@
+.employees-page{
+    padding: 50px;
+    padding-bottom: 20px;
+    height: 100%;
+
+    .filter{
+        input{
+            padding: 10px;
+        }
+    }
+
+    table{
+        ng-container{
+            .filter{
+                display: grid;
+            }
+        }
+    }
+}

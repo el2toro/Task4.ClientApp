@@ -1,0 +1,10 @@
+.shell{
+    display: flex;
+    //height: 100%;
+    flex-direction: column;
+
+    router-outlet{
+        height: 100%;
+        flex: 1;
+    }
+}

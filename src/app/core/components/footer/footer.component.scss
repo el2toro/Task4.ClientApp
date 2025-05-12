@@ -1,0 +1,26 @@
+.footer{
+  background-color: #180A0A;
+  padding: 20px 200px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p{
+    color: #FFFFFF;
+    font-weight: 100;
+
+    span{
+      color: #E85C0D;
+    }
+  }
+
+  .terms{
+    display: flex;
+    gap: 20px;
+
+    p{
+      color: #FFFFFF;
+    }
+  }
+}

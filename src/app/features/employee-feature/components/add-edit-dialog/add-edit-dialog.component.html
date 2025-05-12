@@ -1,0 +1,53 @@
+<h2 mat-dialog-title> {{ title }}</h2>
+<mat-dialog-content>
+<form [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name"/>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Surname</mat-label>
+    <input matInput formControlName="surname"/>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Position</mat-label>
+    <mat-select matInput formControlName="position" (selectionChange)="onPositionChange()">
+      <mat-option *ngFor="let p of positions" [value]="p.key">
+        {{ p.value | position }}
+      </mat-option>
+    </mat-select> 
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Department</mat-label>
+    <input matInput formControlName="department" [value]="selectedDepartment.value"/>
+  </mat-form-field>
+  
+  <mat-form-field style="width: 42%;">
+    <mat-label>Date of birth</mat-label>
+    <input matInput [max]="maxDate" [matDatepicker]="dateOfBirthPicker" formControlName="dateOfBirth">
+    <mat-datepicker-toggle matIconSuffix [for]="dateOfBirthPicker"></mat-datepicker-toggle>
+    <mat-datepicker #dateOfBirthPicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field style="width: 41%">
+    <mat-label>Employment date</mat-label>
+    <input matInput [matDatepicker]="employmentDatePicker" formControlName="employmentDate">
+    <mat-datepicker-toggle matIconSuffix [for]="employmentDatePicker"></mat-datepicker-toggle>
+    <mat-datepicker #employmentDatePicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Salary</mat-label>
+    <input matInput formControlName="salary" type="number"/>
+  </mat-form-field>
+</form>
+<mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button [mat-dialog-close]="save()" cdkFocusInitial>Save</button>
+</mat-dialog-actions>
+</mat-dialog-content>
+
+
