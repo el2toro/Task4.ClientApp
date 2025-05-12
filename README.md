@@ -2,9 +2,32 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.19.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Run Locally
+Clone repository
+
+```bash
+  git clone https://github.com/el2toro/Task4.ClientApp.git
+```
+Go to downloaded project directory
+
+```bash
+  cd Task4.ClientApp
+```
+
+Install dependencies, make sure your node version is >= 18
+
+```bash
+  npm install
+```
+
+Start application
+
+```bash
+  npm start
+```
+
+The app will be running at: http://localhost:4200
 
 ## Code scaffolding
 
